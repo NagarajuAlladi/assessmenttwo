@@ -1,0 +1,42 @@
+.root{
+   width: 100%;
+}
+.mainDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.subDiv{
+    padding-left: 10px;
+}
+.summary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.insideSummary{
+    display: flex;
+}
+
+/* .radioDiv{
+    display: flex;
+} */
+
+@media only screen and (max-width: 600px) {
+   .mainDiv p{
+       font-size: 10px;
+       padding: 7px;
+   }
+    /* .mainDiv .radioButton{
+        font-size: 10px;
+    } */
+    .mainDiv label{
+        font-size: 10px;
+    }
+    /* .radioDiv{
+        display: flex;
+    } */
+  }

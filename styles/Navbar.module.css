@@ -1,0 +1,37 @@
+.outerDiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 220px;
+    margin-right: 30px;
+}
+
+.rightDiv{
+    display: flex;
+}
+
+.rightDiv button{
+    width: 90px;
+    height: 40px;
+    border: none;
+    color: rgb(58,112,209);
+}
+
+.rightDiv .buttonTwo{
+    margin-left: 15px;
+    width: auto;
+    height: 40px;
+    background-color: rgb(58,112,209);
+    border: none;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .outerDiv{
+
+        margin-left: 50px;
+        margin-right: 5px;
+        margin-top: 40px;
+    }
+  }
