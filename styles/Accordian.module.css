@@ -12,11 +12,14 @@
     background-color: rgb(232,247,239);
     color: rgb(131,212,166);
     border: none;
-    
+    padding: 5px;
 }
+
 
 .openseatButton{
     margin-left: 15px;
+    padding: 5px;
+    font-size: 10px;
     color: rgb(58,112,209);
     background-color: white;
     border: 1px solid rgb(109, 105, 105);
@@ -25,7 +28,7 @@
 
 @media only screen and (max-width: 600px) {
     .outerDiv{
-        margin-left: 50px;
+        margin-left: 55px;
         margin-right: 5px;
     }
     .innerDiv{

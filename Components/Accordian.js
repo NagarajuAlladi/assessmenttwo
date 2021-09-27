@@ -50,7 +50,7 @@ class Accordian extends React.Component {
             id="panel1a-header"
             onClick={this.handleClick}
           >
-            <Typography>Engineering&nbsp;&nbsp;<small style={{color:'rgb(58,112,209)'}}>4seats</small></Typography>
+            <Typography><b>Engineering&nbsp;&nbsp;</b><small style={{color:'rgb(58,112,209)'}}>4seats</small></Typography>
             <MoreHorizIcon/>
             <button className={styles.openseatButton}>+Open Seat</button>
           </AccordionSummary>
@@ -61,11 +61,11 @@ class Accordian extends React.Component {
             <Table style={{ minWidth: "650" }} aria-label="simple table">
               <TableHead>
                 <TableRow>
-                  <TableCell><small>SEAT TITLE</small></TableCell>
-                  <TableCell align="right"><small>DATE POSTED</small></TableCell>
-                  <TableCell align="right"><small>EXPIRATION DATE</small></TableCell>
-                  <TableCell align="right"><small>CANDIDATES</small></TableCell>
-                  <TableCell align="right"><small>STATUS</small></TableCell>
+                  <TableCell  style={{fontSize:'13px'}}><small>SEAT TITLE</small></TableCell>
+                  <TableCell align="right"  style={{fontSize:'13px'}}><small>DATE POSTED</small></TableCell>
+                  <TableCell align="right"  style={{fontSize:'13px'}}><small>EXPIRATION DATE</small></TableCell>
+                  <TableCell align="right"  style={{fontSize:'13px'}} ><small>CANDIDATES</small></TableCell>
+                  <TableCell align="right"  style={{fontSize:'13px'}}><small>STATUS</small></TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
@@ -74,14 +74,14 @@ class Accordian extends React.Component {
                     <TableCell component="th" scope="row">
                       <FormControlLabel
                         value="title"
-                        control={<StarOutlineIcon/>}
+                        control={<StarOutlineIcon  fontSize='small'/>}
                         label={row.name}
                       />
                     </TableCell>
-                    <TableCell align="right">{row.calories}</TableCell>
-                    <TableCell align="right">{row.fat}</TableCell>
-                    <TableCell align="right">{row.carbs}</TableCell>
-                    <TableCell align="right">{row.protein}</TableCell>
+                    <TableCell align="right" style={{fontSize:'0.8rem'}}>{row.calories}</TableCell>
+                    <TableCell align="right"  style={{fontSize:'0.8rem'}}>{row.fat}</TableCell>
+                    <TableCell align="right"  style={{fontSize:'0.8rem'}}>{row.carbs}</TableCell>
+                    <TableCell align="right"  style={{fontSize:'0.8rem'}}>{row.protein}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>

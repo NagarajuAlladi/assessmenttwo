@@ -23,35 +23,19 @@ const useStyles = makeStyles((theme) => ({
 
 function Subnav() {
     const classes = useStyles();
-    const [state, setState] = React.useState({
-        age: '',
-        name: 'hai',
-    });
-
-    const handleChange = (event) => {
-        const name = event.target.name;
-        setState({
-        ...state,
-        [name]: event.target.value,
-        });
-    };
-
     return (
         <div className={styles.outerDiv} >
            <div >
-           <p>Filterby:</p>
+           <p style={{fontSize:'0.9rem'}}>Filterby:</p>
            </div>
            <div className={styles.innerDiv}>
-           <FormControl variant="outlined" className={classes.formControl}>
-                <InputLabel>Date</InputLabel>
+           <FormControl variant="outlined"  className={classes.formControl}>
+                <InputLabel style={{fontSize:'0.9rem'}}><small>Date</small></InputLabel>
                 <Select
                     native
-                    value={state.age}
-                    onChange={handleChange}
-                    
+                    // style={{width:'150px',height:'30px'}}
                     label="Date"
-                    margin="normal"
-                    // margin="dense"
+                    variant='outlined'
                     inputProps={{
                     name: 'Date',
                     id: 'outlined-age-native-simple',
@@ -64,10 +48,10 @@ function Subnav() {
            </FormControl>
            </div>
            <div className={styles.innerDiv}>
-               <button><StarBorderIcon/></button>
+               <button style={{width:'25px',height:'22px'}}><StarBorderIcon style={{fontSize:'1rem'}}/></button>
            </div>
-           <div className={styles.innerDiv}>
-           <FormControl>
+           <div className={styles.innerDiv} style={{display:'flex'}}>
+           {/* <FormControl>
                     <Input
                     startAdornment={
                         <InputAdornment position="start">
@@ -75,18 +59,10 @@ function Subnav() {
                         </InputAdornment>
                     }
                     />
-                </FormControl>
+            </FormControl> */}
+            <SearchIcon fontSize='small'/>
+            <Typography style={{fontSize:'0.8rem',padding:'2px'}}>Search</Typography>
           </div>
-          {/* <div className={styles.innerDiv}>
-                <Grid container spacing={1} alignItems="flex-end">
-                <Grid item>
-                <SearchIcon style={{ cursor: "pointer" }} />
-                </Grid>
-                <Grid item>
-                    <TextField id="input-with-icon-grid" label="search" />
-                </Grid>
-                </Grid>
-          </div> */}
         </div>
     )
 }

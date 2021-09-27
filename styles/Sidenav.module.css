@@ -1,6 +1,6 @@
 .outerDiv{
     height: 100%;
-    width: 200px;
+    width: 180px;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -11,6 +11,7 @@
 .list{
     color: white;
 }
+
 
 
 .menuBar{

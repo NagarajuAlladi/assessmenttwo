@@ -37,7 +37,17 @@ import Avatar from '@material-ui/core/Avatar';
 import styles from '../styles/Sidenav.module.css'
 
 
+
+const useStyles = makeStyles((theme) => ({
+  listItemText:{
+    fontSize:'0.8rem'
+  }
+}));
+
+
 function Sidenav() {
+  const classes = useStyles();
+
   const [open,setOpen]=useState(true);
     return (
       <div className={styles.totalDiv}>
@@ -55,64 +65,44 @@ function Sidenav() {
           />
           </ListItemIcon>
         <ListItem button key="home" className={styles.listItem} >
-          <ListItemIcon title='OpenSeats'>
-            <LocalMallOutlinedIcon style={{color:'white'}} />
-          </ListItemIcon>
-          <ListItemText primary="OpenSeats"  className={styles.textItem}/>
+           <LocalMallOutlinedIcon  style={{color:'white',fontSize:'15px'}} />
+          <ListItemText primary="&nbsp;&nbsp;OpenSeats"  classes={{primary:classes.listItemText}} className={styles.textItem}/>
         </ListItem>
         <ListItem button key="Notification">
-          <ListItemIcon title='Table Talk'>
-            <ModeCommentOutlinedIcon style={{color:'white'}}/>
-          </ListItemIcon>
-          <ListItemText primary="Table Talk"  className={styles.textItem} />
+           <ModeCommentOutlinedIcon style={{color:'white',fontSize:'15px'}}/>
+          <ListItemText primary="&nbsp;&nbsp;Table Talk"  classes={{primary:classes.listItemText}} className={styles.textItem} />
         </ListItem>
         <ListItem button key="company">
-          <ListItemIcon title='Company'>
-            <BusinessOutlinedIcon style={{color:'white'}}/>
-          </ListItemIcon>
-          <ListItemText primary="Company"  className={styles.textItem} />
+          <BusinessOutlinedIcon style={{color:'white',fontSize:'15px'}}/>
+          <ListItemText primary="&nbsp;&nbsp;Company" classes={{primary:classes.listItemText}} className={styles.textItem}/>
         </ListItem>
         <ListItem button key="messages">
-          <ListItemIcon title='Messages'>
-            <MailOutlineOutlinedIcon style={{color:'white'}}/>
-          </ListItemIcon>
-          <ListItemText primary="Messages"  className={styles.textItem} />
+          <MailOutlineOutlinedIcon style={{color:'white',fontSize:'15px'}}/>
+          <ListItemText primary="&nbsp;&nbsp;Messages" classes={{primary:classes.listItemText}} className={styles.textItem}/>
         </ListItem>
         <ListItem button key="Team">
-          <ListItemIcon title='Team'>
-            <GroupOutlinedIcon style={{color:'white'}}/>
-          </ListItemIcon>
-          <ListItemText primary="Team"  className={styles.textItem} />
+          <GroupOutlinedIcon style={{color:'white',fontSize:'15px'}}/>
+          <ListItemText primary="&nbsp;&nbsp;Team" classes={{primary:classes.listItemText}} className={styles.textItem} />
         </ListItem>
         <ListItem button key="Notifications" >
-          <ListItemIcon title='Notifications'>
-            < NotificationsNoneOutlinedIcon style={{color:'white'}}/>
-          </ListItemIcon>
-          <ListItemText primary="Notifications"  className={styles.textItem}/>
+          < NotificationsNoneOutlinedIcon style={{color:'white',fontSize:'15px'}}/>
+          <ListItemText primary="&nbsp;&nbsp;Notifications" classes={{primary:classes.listItemText}} className={styles.textItem}/>
         </ListItem>
         <ListItem button key="Refferals">
-          <ListItemIcon title='Refferals'>
-            < ThumbUpAltOutlinedIcon style={{color:'white'}}/>
-          </ListItemIcon>
-          <ListItemText primary="Refferals"  className={styles.textItem}/>
+           < ThumbUpAltOutlinedIcon style={{color:'white',fontSize:'15px'}}/>
+          <ListItemText primary="&nbsp;&nbsp;Refferals" classes={{primary:classes.listItemText}} className={styles.textItem}/>
         </ListItem>
         <ListItem button key="liverooms">
-          <ListItemIcon title='LiveRooms'>
-            < RoomServiceOutlinedIcon style={{color:'white'}}/>
-          </ListItemIcon>
-          <ListItemText primary="LiveRooms"  className={styles.textItem}/>
+          < RoomServiceOutlinedIcon style={{color:'white',fontSize:'15px'}}/>
+          <ListItemText primary="&nbsp;&nbsp;LiveRooms" classes={{primary:classes.listItemText}} className={styles.textItem}/>
         </ListItem>
-        <ListItem button key="settings" >
-          <ListItemIcon title='Settings'>
-            < SettingsOutlinedIcon style={{color:'white'}}/>
-          </ListItemIcon>
-          <ListItemText primary="Settings"  className={styles.textItem} />
+        <ListItem style={{paddingTop:'90px'}} button key="settings" >
+          < SettingsOutlinedIcon style={{color:'white',fontSize:'15px'}}/>
+          <ListItemText primary="&nbsp;&nbsp;Settings"  classes={{primary:classes.listItemText}} className={styles.textItem} />
         </ListItem>
-        <ListItem button key="Help">
-          <ListItemIcon title='Help'>
-            < HelpOutlineOutlinedIcon style={{color:'white'}}/>
-          </ListItemIcon>
-          <ListItemText primary="Help"  className={styles.textItem} />
+        <ListItem  button key="Help">
+          < HelpOutlineOutlinedIcon style={{color:'white',fontSize:'15px'}}/>
+          <ListItemText primary="&nbsp;&nbsp;Help" classes={{primary:classes.listItemText}} className={styles.textItem}/>
         </ListItem>
 
 
@@ -120,8 +110,8 @@ function Sidenav() {
           <ListItemAvatar className={styles.textItem}>
             <Avatar  alt="Remy Sharp" src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80" />
           </ListItemAvatar>
-          <ListItemText primary="Dinesh" secondary="Admin"  className={styles.textItem} />
-          {/* <ListItemText primary="Admin"/> */}
+          <ListItemText primary="Dinesh" secondary="Admin" className={styles.textItem} classes={{primary:classes.listItemText}}/>
+         
         </ListItem>
       </List>
 
