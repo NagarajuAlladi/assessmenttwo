@@ -11,6 +11,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import styles from '../styles/Subnav.module.css'
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 
 
@@ -26,16 +27,17 @@ function Subnav() {
     return (
         <div className={styles.outerDiv} >
            <div >
-           <p style={{fontSize:'0.9rem'}}>Filterby:</p>
+           <p style={{fontSize:'0.9rem'}}>Filter By:</p>
            </div>
            <div className={styles.innerDiv}>
-           <FormControl variant="outlined"  className={classes.formControl}>
+           <FormControl variant="outlined" size='small'  className={classes.formControl}>
                 <InputLabel style={{fontSize:'0.9rem'}}><small>Date</small></InputLabel>
                 <Select
                     native
                     // style={{width:'150px',height:'30px'}}
                     label="Date"
                     variant='outlined'
+                    
                     inputProps={{
                     name: 'Date',
                     id: 'outlined-age-native-simple',
@@ -48,7 +50,8 @@ function Subnav() {
            </FormControl>
            </div>
            <div className={styles.innerDiv}>
-               <button style={{width:'25px',height:'22px'}}><StarBorderIcon style={{fontSize:'1rem'}}/></button>
+               {/* <button style={{width:'25px',height:'22px'}}><StarBorderIcon style={{fontSize:'1rem'}}/></button> */}
+               <Button style={{width:'10px',height:'40px'}} variant="contained"><StarBorderIcon /></Button>
            </div>
            <div className={styles.innerDiv} style={{display:'flex'}}>
            {/* <FormControl>

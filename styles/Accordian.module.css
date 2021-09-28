@@ -22,7 +22,13 @@
     font-size: 10px;
     color: rgb(58,112,209);
     background-color: white;
-    border: 1px solid rgb(109, 105, 105);
+    border: 0.001rem solid rgb(194, 190, 190);
+}
+
+
+.expandButton{
+    border: 0.001rem solid rgb(194, 190, 190);
+    background-color: white;
 }
 
 

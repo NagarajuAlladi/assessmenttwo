@@ -38,15 +38,15 @@ export default function Home() {
 
       {/* <SidenavOne/> */}
 
-      <Sidenav/>
+      {/* <Sidenav/> */}
 
-      <Navbar/>
+      {/* <Navbar/> */}
 
-      <Subnav/>
+      {/* <Subnav/> */}
 
       <Accordian/>
 
-      <AccordianOne/>
+      {/* <AccordianOne/> */}
 
       {/* <AccordianTwo/> */}
 

@@ -6,7 +6,7 @@ import ExpandLess from "@material-ui/icons/ExpandLess";
 import ExpandMore from "@material-ui/icons/ExpandMore";
 import Radio from "@material-ui/core/Radio";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import { Accordion, AccordionSummary, Typography } from "@material-ui/core";
+import { Accordion, AccordionSummary, Grid, Typography } from "@material-ui/core";
 
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
@@ -18,6 +18,7 @@ import Paper from "@material-ui/core/Paper";
 
 import StarOutlineIcon from '@material-ui/icons/StarOutline';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
+import { Button } from "@material-ui/core";
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
@@ -40,20 +41,35 @@ class Accordian extends React.Component {
     this.setState((state) => ({ open: !state.open }));
   };
 
+  // const [activeRow,setActiveRow]=useState(null);
+
   render() {
     return (
       <div  className={styles.outerDiv}>
+      
         <Accordion>
           <AccordionSummary
-            expandIcon={this.state.open ? <button><ExpandLess /></button> : <button><ExpandMore /></button>}
+            expandIcon={this.state.open ? 
+            <Button  variant='outlined' size='small'><ExpandLess style={{opacity:'0.3'}}/></Button> 
+            : <Button variant='outlined' size='small'><ExpandMore style={{opacity:'0.3'}}/></Button>}
             aria-controls="panel1a-content"
             id="panel1a-header"
             onClick={this.handleClick}
           >
+
+            <Grid container justifyContent='space-between'>  
+            <Grid item>
             <Typography><b>Engineering&nbsp;&nbsp;</b><small style={{color:'rgb(58,112,209)'}}>4seats</small></Typography>
+            </Grid>
+            <Grid item style={{display:'flex',alignItems:'center'}}>
             <MoreHorizIcon/>
-            <button className={styles.openseatButton}>+Open Seat</button>
+            <Button style={{marginLeft:'15px'}} variant='text' color='primary' variant='outlined' size='small'>
+              <Typography variant='Button'>+Open Seat</Typography>
+            </Button>
+            </Grid>
+            </Grid>
           </AccordionSummary>
+        
         </Accordion>
 
         {this.state.open && (
@@ -70,11 +86,13 @@ class Accordian extends React.Component {
               </TableHead>
               <TableBody>
                 {rows.map((row) => (
-                  <TableRow key={row.name}>
+                  <TableRow key={row.name} >
+                    {/* onClick={()=>setActiveRow(row.name)} */}
                     <TableCell component="th" scope="row">
                       <FormControlLabel
                         value="title"
                         control={<StarOutlineIcon  fontSize='small'/>}
+                        // color={row.name===activeRow && 'primary'}
                         label={row.name}
                       />
                     </TableCell>

@@ -17,6 +17,8 @@ import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
+import { Grid,Button } from "@material-ui/core";
+
 import StarOutlineIcon from '@material-ui/icons/StarOutline';
 
 function createData(name, calories, fat, carbs, protein) {
@@ -31,7 +33,7 @@ const rows = [
 //   createData("Gingerbread", 356, 16.0, 49, 3.9)
 ];
 
-class Accordian extends React.Component {
+class Accordian  {
   state = {
     open: true
   };
@@ -46,14 +48,23 @@ class Accordian extends React.Component {
       <div  className={styles.outerDiv}>
         <Accordion>
           <AccordionSummary
-            expandIcon={this.state.open ?<button><ExpandLess /></button> : <button><ExpandMore /></button>}
+            expandIcon={this.state.open ?<button className={styles.expandButton}><ExpandLess  style={{opacity:'0.3'}}/></button> : <button className={styles.expandButton}><ExpandMore style={{opacity:'0.3'}}/></button>}
             aria-controls="panel1a-content"
             id="panel1a-header"
             onClick={this.handleClick}
           >
-            <Typography><b>Design&nbsp;&nbsp;</b><small style={{color:'rgb(58,112,209)'}}>3seats</small></Typography>
+
+
+            <Grid container justifyContent='space-between'>  
+            <Grid item>
+            <Typography><b>Engineering&nbsp;&nbsp;</b><small style={{color:'rgb(58,112,209)'}}>4seats</small></Typography>
+            </Grid>
+            <Grid item style={{display:'flex',alignItems:'center'}}>
             <MoreHorizIcon/>
-            <button className={styles.openseatButton}>+Open Seat</button>
+            <Button  variant='outlined' size='small'><small>+Open Seat</small></Button>
+            </Grid>
+            </Grid>
+           
           </AccordionSummary>
         </Accordion>
 
