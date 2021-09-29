@@ -39,10 +39,9 @@ function Sidenav() {
             width="45"
             height="40"
             style={{
-              margin: "auto",
-              marginLeft: "20px",
-              marginBottom: "20px",
-              marginTop: "20px",
+              marginLeft: "1.25rem",
+              marginBottom: "1.25rem",
+              marginTop: "1.25rem",
             }}
           />
         </ListItemIcon>
@@ -148,7 +147,7 @@ function Sidenav() {
         <ListItem button key="Avatar" className={styles.textItem}>
           <ListItemAvatar className={styles.textItem}>
             <Avatar
-              style={{ width: "30px", height: "30px" }}
+              style={{ width: "1.87rem", height: "1.87rem" }}
               alt="Remy Sharp"
               src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
             />

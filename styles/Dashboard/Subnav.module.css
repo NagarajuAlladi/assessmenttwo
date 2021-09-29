@@ -1,13 +1,13 @@
 .outerDiv{
     display: flex;
     align-items: center;
-    margin-left: 230px;
+    margin-left: 14.37rem;
 }
 .innerDiv{
-    margin: 10px;
+    margin: 0.625rem;
 }
 @media only screen and (max-width: 600px) {
     .outerDiv{
-        margin-left: 55px;
+        margin-left: 3.43rem;
     }
   }

@@ -15,7 +15,7 @@ function Navbar() {
           size="small"
           style={{
             color: "rgb(58,112,209)",
-            padding: "10px 10px",
+            padding: "0.62rem 0.62rem",
             border: " 0.001rem solid rgb(194, 190, 190)",
           }}
         >
@@ -27,8 +27,8 @@ function Navbar() {
           variant="text"
           size="small"
           style={{
-            marginLeft: "10px",
-            padding: "10px 10px",
+            marginLeft: "0.62rem",
+            padding: "0.62rem 0.62rem",
             color: "white",
             backgroundColor: "rgb(58,112,209)",
           }}

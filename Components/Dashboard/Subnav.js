@@ -49,7 +49,7 @@ function Subnav() {
         </FormControl>
       </div>
       <div className={styles.innerDiv}>
-        <ToggleButton style={{ height: "40px" }}>
+        <ToggleButton style={{ height: "2.5rem" }}>
           <StarBorderIcon fontSize="small" />
         </ToggleButton>
       </div>
@@ -58,7 +58,7 @@ function Subnav() {
         style={{ display: "flex", cursor: "pointer" }}
       >
         <SearchIcon fontSize="small" />
-        <Typography style={{ fontSize: "0.8rem", padding: "2px" }}>
+        <Typography style={{ fontSize: "0.8rem", padding: "0.12rem" }}>
           Search
         </Typography>
       </div>

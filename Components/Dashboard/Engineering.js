@@ -39,7 +39,7 @@ const rows = [
       style={{
         backgroundColor: "rgb(232,247,239)",
         color: "rgb(134,205,165)",
-        padding: "5px 10px",
+        padding: "0.31rem 0.62rem",
       }}
     >
       <Typography variant="caption">
@@ -60,7 +60,7 @@ const rows = [
       style={{
         backgroundColor: "rgb(232,247,239)",
         color: "rgb(134,205,165)",
-        padding: "5px 10px",
+        padding: "0.31rem 0.62rem",
       }}
     >
       <Typography variant="caption">
@@ -81,7 +81,7 @@ const rows = [
       style={{
         backgroundColor: "rgb(233,238,246)",
         color: "rgb(104,142,203)",
-        padding: "5px 8px",
+        padding: "0.31rem 0.5rem",
       }}
     >
       <Typography variant="caption">
@@ -103,7 +103,7 @@ const rows = [
       style={{
         backgroundColor: "rgb(232,247,239)",
         color: "rgb(131,212,166)",
-        padding: "5px 10px",
+        padding: "0.31rem 0.62rem",
       }}
     >
       <Typography variant="caption">
@@ -121,11 +121,11 @@ function Engineering() {
 
   return (
     <div className={styles.outerDiv}>
-      <Accordion style={{ paddingRight: "15px" }}>
+      <Accordion style={{ paddingRight: "0.93rem" }}>
         <AccordionSummary
           expandIcon={
             open ? (
-              <ToggleButton style={{ height: "28px", width: "28px" }}>
+              <ToggleButton style={{ height: "0.75rem", width: "0.75rem" }}>
                 <ExpandLess style={{ opacity: "0.5" }} />
               </ToggleButton>
             ) : (
@@ -149,7 +149,7 @@ function Engineering() {
               <MoreHorizIcon style={{ opacity: "0.7" }} />
               <Button
                 style={{
-                  marginLeft: "15px",
+                  marginLeft: "0.93rem",
                   border: " 0.001rem solid rgb(194, 190, 190)",
                 }}
                 variant="text"
@@ -168,28 +168,28 @@ function Engineering() {
       </Accordion>
 
       {open && (
-        <TableContainer component={Paper} style={{ padding: "0 15px " }}>
+        <TableContainer component={Paper} style={{ padding: "0 0.93rem " }}>
           <Table
             size="small"
             style={{ minWidth: "650" }}
             aria-label="simple table"
-            style={{ padding: "20px" }}
+            style={{ padding: "1.25rem" }}
           >
             <TableHead>
               <TableRow style={{ backgroundColor: "rgb(248,250,252)" }}>
-                <TableCell style={{ fontSize: "13px" }}>
+                <TableCell>
                   <small>SEAT TITLE</small>
                 </TableCell>
-                <TableCell align="right" style={{ fontSize: "13px" }}>
+                <TableCell align="right">
                   <small>DATE POSTED</small>
                 </TableCell>
-                <TableCell align="right" style={{ fontSize: "13px" }}>
+                <TableCell align="right">
                   <small>EXPIRATION DATE</small>
                 </TableCell>
-                <TableCell align="right" style={{ fontSize: "13px" }}>
+                <TableCell align="right">
                   <small>CANDIDATES</small>
                 </TableCell>
-                <TableCell align="right" style={{ fontSize: "13px" }}>
+                <TableCell align="right">
                   <small>STATUS</small>
                 </TableCell>
               </TableRow>
@@ -203,7 +203,7 @@ function Engineering() {
                       value="title"
                       control={
                         <StarOutlineIcon
-                          style={{ marginLeft: "15px" }}
+                          style={{ marginLeft: "0.93rem" }}
                           fontSize="small"
                         />
                       }

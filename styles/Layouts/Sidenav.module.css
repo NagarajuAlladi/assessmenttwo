@@ -1,6 +1,6 @@
 .outerDiv{
     height: 100%;
-    width: 200px;
+    width: 12.5rem;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -12,7 +12,7 @@
 }
 @media only screen and (max-width: 600px) {
     .outerDiv{
-        width: 50px;
+        width: 3.125rem;
     }
     .textItem{
         display: none; 

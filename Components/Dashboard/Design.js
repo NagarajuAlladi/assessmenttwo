@@ -38,7 +38,7 @@ const rows = [
       style={{
         backgroundColor: "rgb(232,247,239)",
         color: "rgb(131,212,166)",
-        padding: "5px 10px",
+        padding: "0.31rem 0.62rem",
       }}
     >
       <Typography variant="caption">
@@ -59,7 +59,7 @@ const rows = [
       style={{
         backgroundColor: "rgb(232,247,239)",
         color: "rgb(131,212,166)",
-        padding: "5px 10px",
+        padding: "0.31rem 0.62rem",
       }}
     >
       <Typography variant="caption">
@@ -80,7 +80,7 @@ const rows = [
       style={{
         backgroundColor: "rgb(233,238,246)",
         color: "rgb(104,142,203)",
-        padding: "5px 8px",
+        padding: "0.31rem 0.5rem",
       }}
     >
       <Typography variant="caption">
@@ -102,11 +102,11 @@ function Design() {
         <AccordionSummary
           expandIcon={
             open ? (
-              <ToggleButton style={{ height: "28px", width: "28px" }}>
+              <ToggleButton style={{ height: "1.75rem", width: "1.75rem" }}>
                 <ExpandLess style={{ opacity: "0.3" }} />
               </ToggleButton>
             ) : (
-              <ToggleButton style={{ height: "28px", width: "28px" }}>
+              <ToggleButton style={{ height: "1.75rem", width: "1.75rem" }}>
                 <ExpandLess style={{ opacity: "0.3" }} />
               </ToggleButton>
             )
@@ -126,7 +126,7 @@ function Design() {
               <MoreHorizIcon style={{ opacity: "0.7" }} />
               <Button
                 style={{
-                  marginLeft: "15px",
+                  marginLeft: "0.93rem",
                   border: " 0.001rem solid rgb(194, 190, 190)",
                 }}
                 variant="text"
@@ -144,7 +144,7 @@ function Design() {
       </Accordion>
 
       {open && (
-        <TableContainer component={Paper} style={{ padding: "0 15px " }}>
+        <TableContainer component={Paper} style={{ padding: "0 0.93rem " }}>
           <Table
             size="small"
             style={{ minWidth: "650" }}
@@ -178,7 +178,7 @@ function Design() {
                       control={
                         <StarOutlineIcon
                           fontSize="small"
-                          style={{ marginLeft: "15px" }}
+                          style={{ marginLeft: "0.93rem" }}
                         />
                       }
                       // label={row.name}
