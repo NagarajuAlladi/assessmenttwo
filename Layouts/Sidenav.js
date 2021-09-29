@@ -16,7 +16,7 @@ import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
 import HelpOutlineOutlinedIcon from "@material-ui/icons/HelpOutlineOutlined";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
-import styles from "../styles/Sidenav.module.css";
+import styles from '../styles/Layouts/Sidenav.module.css'
 
 const useStyles = makeStyles((theme) => ({
   listItemText: {
