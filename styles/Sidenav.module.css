@@ -1,5 +1,3 @@
-
-
 .outerDiv{
     height: 100%;
     width: 200px;
@@ -9,14 +7,9 @@
     top: 0;
     background-color: rgb(58,112,209);
 }
-
 .list{
     color: white;
 }
-
-
-
-
 @media only screen and (max-width: 600px) {
     .outerDiv{
         width: 50px;

@@ -1,18 +1,9 @@
 import React, { useState } from "react";
-import AppBar from "@material-ui/core/AppBar";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import Drawer from "@material-ui/core/Drawer";
-import Hidden from "@material-ui/core/Hidden";
-import IconButton from "@material-ui/core/IconButton";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import MenuIcon from "@material-ui/icons/Menu";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
-
 import LocalMallOutlinedIcon from "@material-ui/icons/LocalMallOutlined";
 import ModeCommentOutlinedIcon from "@material-ui/icons/ModeCommentOutlined";
 import BusinessOutlinedIcon from "@material-ui/icons/BusinessOutlined";
@@ -23,7 +14,6 @@ import ThumbUpAltOutlinedIcon from "@material-ui/icons/ThumbUpAltOutlined";
 import RoomServiceOutlinedIcon from "@material-ui/icons/RoomServiceOutlined";
 import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
 import HelpOutlineOutlinedIcon from "@material-ui/icons/HelpOutlineOutlined";
-
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
 import styles from "../styles/Sidenav.module.css";
@@ -31,7 +21,7 @@ import styles from "../styles/Sidenav.module.css";
 const useStyles = makeStyles((theme) => ({
   listItemText: {
     fontSize: "0.7rem",
-    color:'white'
+    color: "white",
   },
 }));
 
@@ -167,8 +157,10 @@ function Sidenav() {
             primary="Dinesh"
             secondary="Admin"
             className={styles.textItem}
-            classes={{ primary: classes.listItemText,secondary:classes.listItemText }}
-            
+            classes={{
+              primary: classes.listItemText,
+              secondary: classes.listItemText,
+            }}
           />
         </ListItem>
       </List>
