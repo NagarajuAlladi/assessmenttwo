@@ -9,7 +9,7 @@
 .rightDiv{
     display: flex;
 }
-.rightDiv button{
+/* .rightDiv button{
     width: 90px;
     height: 40px;
     padding: 8px;
@@ -27,7 +27,7 @@
     background-color: rgb(58,112,209);
     border: none;
     color: white;
-}
+} */
 @media only screen and (max-width: 600px) {
     .outerDiv{
 
