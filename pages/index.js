@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Engineering from '../Components/Dashboard/Engineering'
 import Marketing from '../Components/Dashboard/Marketing'
-import Navbar from '../Components/Dashboard/Navbar'
+import Navbar from '../Components/Navbar'
 import Sidenav from '../Layouts/Sidenav'
-import Subnav from '../Components/Dashboard/Subnav'
-import theme from '../Components/Dashboard/theme'
+import Subnav from '../Components/Subnav'
+import theme from '../Components/theme'
 import { ThemeProvider } from '@material-ui/styles'
 import Design from '../Components/Dashboard/Design'
 

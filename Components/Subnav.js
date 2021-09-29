@@ -6,7 +6,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import StarBorderIcon from "@material-ui/icons/StarBorder";
 import SearchIcon from "@material-ui/icons/Search";
-import styles from "../../styles/Dashboard/Subnav.module.css"
+import styles from "../styles/Dashboard/Subnav.module.css"
 import Grid from "@material-ui/core/Grid";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
