@@ -1,4 +1,4 @@
-import { Typography } from '@material-ui/core'
+import { IconButton, Typography } from '@material-ui/core'
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -12,6 +12,7 @@ import styles from '../styles/Subnav.module.css'
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import ToggleButton from '@material-ui/lab/ToggleButton';
 
 
 
@@ -27,7 +28,7 @@ function Subnav() {
     return (
         <div className={styles.outerDiv} >
            <div >
-           <p style={{fontSize:'0.9rem'}}>Filter By:</p>
+           <Typography variant='body2'>Filter By:</Typography>
            </div>
            <div className={styles.innerDiv}>
            <FormControl variant="outlined" size='small'  className={classes.formControl}>
@@ -50,10 +51,11 @@ function Subnav() {
            </FormControl>
            </div>
            <div className={styles.innerDiv}>
-               {/* <button style={{width:'25px',height:'22px'}}><StarBorderIcon style={{fontSize:'1rem'}}/></button> */}
-               <Button style={{width:'10px',height:'40px'}} variant="contained"><StarBorderIcon /></Button>
+               <ToggleButton style={{height:'40px'}}>
+                <StarBorderIcon fontSize='small'/>
+               </ToggleButton> 
            </div>
-           <div className={styles.innerDiv} style={{display:'flex'}}>
+           <div className={styles.innerDiv} style={{display:'flex',cursor:'pointer'}}>
            {/* <FormControl>
                     <Input
                     startAdornment={

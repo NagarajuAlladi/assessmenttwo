@@ -1,8 +1,9 @@
 
  .outerDiv{
-    margin-top: 10px;
-    margin-left: 220px;
+    margin-top: 20px;
+    margin-left: 230px;
     margin-right: 30px;
+    margin-bottom: 30px;
 }
 .innerDiv{
     margin-left: 220px;
@@ -14,7 +15,6 @@
     border: none;
     padding: 5px;
 }
-
 
 .openseatButton{
     margin-left: 15px;

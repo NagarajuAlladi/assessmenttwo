@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Accordian from '../Components/Accordian'
-import AccordianOne from '../Components/AccordianOne'
-import AccordianTwo from '../Components/AccordianTwo'
+
 import ControlledAccordions from '../Components/ControlledAccordions'
+import Design from '../Components/Dashboard/Design'
+import Engineering from '../Components/Dashboard/Engineering'
+import Marketing from '../Components/Dashboard/Marketing'
 import Navbar from '../Components/Navbar'
 import ResponsiveDrawer from '../Components/ResponsiveDrawer'
 import ResponsiveDrawerOne from '../Components/ResponsiveDrawerOne'
@@ -38,17 +38,17 @@ export default function Home() {
 
       {/* <SidenavOne/> */}
 
-      {/* <Sidenav/> */}
+      <Sidenav/>
 
-      {/* <Navbar/> */}
+      <Navbar/>
 
-      {/* <Subnav/> */}
+      <Subnav/>
 
-      <Accordian/>
+      <Engineering/>
+      
+      <Design/>
 
-      {/* <AccordianOne/> */}
-
-      {/* <AccordianTwo/> */}
+     <Marketing/>
 
       {/* <TemporaryDrawer/> */}
     </div>
