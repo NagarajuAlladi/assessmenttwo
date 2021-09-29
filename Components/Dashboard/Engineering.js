@@ -27,6 +27,8 @@ import { Button } from "@material-ui/core";
 import ToggleButton from "@material-ui/lab/ToggleButton";
 import FlashOnIcon from "@material-ui/icons/FlashOn";
 
+import classNames from 'classnames';
+
 function createData(name, dateposted, expirationdate, candidates, status) {
   return { name, dateposted, expirationdate, candidates, status };
 }
@@ -37,10 +39,20 @@ const rows = [
     "12/12/2021",
     "12/12/2021",
     "24Candidates",
-    <Button variant='text' size='small'
-      style={{ backgroundColor: "rgb(232,247,239)", color: "rgb(131,212,166)" }}
+    <Button
+      variant="text"
+      size="small"
+      style={{
+        backgroundColor: "rgb(232,247,239)",
+        color: "rgb(134,205,165)",
+        padding: "5px 10px",
+      }}
     >
-      <Typography variant="caption"><small>Interview Rounds</small></Typography>
+      <Typography variant="caption">
+        <small>
+          <b>Interview Rounds</b>
+        </small>
+      </Typography>
     </Button>
   ),
   createData(
@@ -48,10 +60,20 @@ const rows = [
     "12/12/2021",
     "12/12/2021",
     "52Candidates",
-    <Button variant='text' size='small'
-      style={{ backgroundColor: "rgb(232,247,239)", color: "rgb(131,212,166)" }}
+    <Button
+      variant="text"
+      size="small"
+      style={{
+        backgroundColor: "rgb(232,247,239)",
+        color: "rgb(134,205,165)",
+        padding: "5px 10px",
+      }}
     >
-      <Typography variant="caption"><small>Interview Rounds</small></Typography>
+      <Typography variant="caption">
+        <small>
+          <b>Interview Rounds</b>
+        </small>
+      </Typography>
     </Button>
   ),
   createData(
@@ -59,15 +81,21 @@ const rows = [
     "12/12/2021",
     "12/12/2021",
     "35Candidates",
-    <Button variant='text' size='small'
+    <Button
+      variant="text"
+      size="small"
       style={{
-        backgroundColor: "rgb(134, 172, 243)",
-        color: "rgb(58,112,209)",
-        
+        backgroundColor: "rgb(233,238,246)",
+        color: "rgb(104,142,203)",
+        padding: "5px 8px",
       }}
     >
-      <Typography variant="caption"><small>Boost Seat</small></Typography>
-      <FlashOnIcon  style={{fontSize:'0.9rem'}}/>
+      <Typography variant="caption">
+        <small>
+          <b>Boost Seat</b>
+        </small>
+      </Typography>
+      <FlashOnIcon style={{ fontSize: "0.9rem" }} />
     </Button>
   ),
   createData(
@@ -75,10 +103,20 @@ const rows = [
     "12/12/2021",
     "12/12/2021",
     "22Candidates",
-    <Button variant='text' size='small'
-      style={{ backgroundColor: "rgb(232,247,239)", color: "rgb(131,212,166)" }}
+    <Button
+      variant="text"
+      size="small"
+      style={{
+        backgroundColor: "rgb(232,247,239)",
+        color: "rgb(131,212,166)",
+        padding: "5px 10px",
+      }}
     >
-      <Typography variant="caption"><small>Interview Rounds</small></Typography>
+      <Typography variant="caption">
+        <small>
+          <b>Interview Rounds</b>
+        </small>
+      </Typography>
     </Button>
   ),
 ];
@@ -89,7 +127,7 @@ function Engineering() {
 
   return (
     <div className={styles.outerDiv}>
-      <Accordion>
+      <Accordion style={{ paddingRight: "15px" }}>
         <AccordionSummary
           expandIcon={
             open ? (
@@ -116,14 +154,19 @@ function Engineering() {
             <Grid item style={{ display: "flex", alignItems: "center" }}>
               <MoreHorizIcon style={{ opacity: "0.7" }} />
               <Button
-                style={{ marginLeft: "15px",border:' 0.001rem solid rgb(194, 190, 190)'}}
+                style={{
+                  marginLeft: "15px",
+                  border: " 0.001rem solid rgb(194, 190, 190)",
+                }}
                 variant="text"
                 color="primary"
                 variant="outlined"
                 size="small"
                 padd
               >
-                <Typography variant="caption"><small>+Open Seat</small></Typography>
+                <Typography variant="caption">
+                  <small>+Open Seat</small>
+                </Typography>
               </Button>
             </Grid>
           </Grid>
@@ -131,8 +174,13 @@ function Engineering() {
       </Accordion>
 
       {open && (
-        <TableContainer component={Paper}>
-          <Table size='small' style={{ minWidth: "650" }} aria-label="simple table">
+        <TableContainer component={Paper} style={{ padding: "0 15px " }}>
+          <Table
+            size="small"
+            style={{ minWidth: "650" }}
+            aria-label="simple table"
+            style={{ padding: "20px" }}
+          >
             <TableHead>
               <TableRow style={{ backgroundColor: "rgb(248,250,252)" }}>
                 <TableCell style={{ fontSize: "13px" }}>
@@ -168,21 +216,13 @@ function Engineering() {
                       color={row.name === activeRow && "primary"}
                       // label={row.name}
                     />
-                    {""}
+                    {/* {""} */}
                     <b>{row.name}</b>
                   </TableCell>
-                  <TableCell align="right" style={{ fontSize: "0.8rem" }}>
-                    {row.dateposted}
-                  </TableCell>
-                  <TableCell align="right" style={{ fontSize: "0.8rem" }}>
-                    {row.expirationdate}
-                  </TableCell>
-                  <TableCell align="right" style={{ fontSize: "0.8rem" }}>
-                    {row.candidates}
-                  </TableCell>
-                  <TableCell align="right" style={{ fontSize: "0.8rem" }}>
-                    {row.status}
-                  </TableCell>
+                  <TableCell align="right">{row.dateposted}</TableCell>
+                  <TableCell align="right">{row.expirationdate}</TableCell>
+                  <TableCell align="right">{row.candidates}</TableCell>
+                  <TableCell align="right">{row.status}</TableCell>
                 </TableRow>
               ))}
             </TableBody>

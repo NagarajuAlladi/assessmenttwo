@@ -22,8 +22,10 @@
         width: 50px;
     }
     .textItem{
-        display: none;
-        
+        display: none; 
+    }
+    .bildempImage{
+       display: none;
     }
 }
   
