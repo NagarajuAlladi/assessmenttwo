@@ -97,7 +97,7 @@ function Design() {
   const [open, setOpen] = useState(true);
 
   return (
-    <div className={styles.outerDiv}>
+    <div className={styles.container}>
       <Accordion>
         <AccordionSummary
           expandIcon={

@@ -1,36 +1,14 @@
- .outerDiv{
+.container{
     margin-top: 1.25rem;
     margin-left: 14.37rem;
     margin-right: 1.87rem;
     margin-bottom: 1.87rem;
 }
-.innerDiv{
-    margin-left: 14.37rem;
-}
-.button{
-    background-color: rgb(232,247,239);
-    color: rgb(131,212,166);
-    border: none;
-    padding: 0.31rem;
-}
-.openseatButton{
-    margin-left: 0.93rem;
-    padding: 0.31rem;
-    font-size: 0.62rem;
-    color: rgb(58,112,209);
-    background-color: white;
-    border: 0.001rem solid rgb(194, 190, 190);
-}
-.expandButton{
-    border: 0.001rem solid rgb(194, 190, 190);
-    background-color: white;
-}
+
 @media only screen and (max-width: 600px) {
-    .outerDiv{
+    .container{
         margin-left: 3.43rem;
         margin-right: 0.31rem;
     }
-    .innerDiv{
-        margin-left: 0;
-    }
+   
   }

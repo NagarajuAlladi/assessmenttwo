@@ -119,7 +119,7 @@ function Engineering() {
   const [activeRow, setActiveRow] = useState(null);
 
   return (
-    <div className={styles.outerDiv}>
+    <div className={styles.container}>
       <Accordion style={{ paddingRight: "0.93rem" }}>
         <AccordionSummary
           expandIcon={
