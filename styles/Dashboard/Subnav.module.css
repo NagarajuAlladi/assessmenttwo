@@ -1,13 +1,13 @@
-.outerDiv{
+.container{
     display: flex;
     align-items: center;
     margin-left: 14.37rem;
 }
-.innerDiv{
+.wrapper{
     margin: 0.625rem;
 }
 @media only screen and (max-width: 600px) {
-    .outerDiv{
+    .container{
         margin-left: 3.43rem;
     }
   }

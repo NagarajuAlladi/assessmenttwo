@@ -21,11 +21,11 @@ const useStyles = makeStyles((theme) => ({
 function Subnav() {
   const classes = useStyles();
   return (
-    <div className={styles.outerDiv}>
+    <div className={styles.container}>
       <div>
         <Typography variant="body2">Filter By:</Typography>
       </div>
-      <div className={styles.innerDiv}>
+      <div className={styles.wrapper}>
         <FormControl
           variant="outlined"
           size="small"
@@ -48,13 +48,13 @@ function Subnav() {
           </Select>
         </FormControl>
       </div>
-      <div className={styles.innerDiv}>
+      <div className={styles.wrapper}>
         <ToggleButton style={{ height: "2.5rem" }}>
           <StarBorderIcon fontSize="small" />
         </ToggleButton>
       </div>
       <div
-        className={styles.innerDiv}
+        className={styles.wrapper}
         style={{ display: "flex", cursor: "pointer" }}
       >
         <SearchIcon fontSize="small" />
