@@ -4,11 +4,11 @@ import styles from "../styles/Dashboard/Navbar.module.css";
 
 function Navbar() {
   return (
-    <div className={styles.outerDiv}>
-      <div className={styles.leftDiv}>
+    <div className={styles.container}>
+      <div className={styles.leftContainer}>
         <h2>OpenSeats</h2>
       </div>
-      <div className={styles.rightDiv}>
+      <div className={styles.rightContainer}>
         <Button
           variant="contained"
           variant="text"
