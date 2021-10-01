@@ -23,6 +23,9 @@ const styles = (theme) => ({
   expand: {
     marginLeft: "auto",
   },
+ menuItem:{
+  backgroundColor:'rgb(203,205,217)'
+ },
 });
 
 class EmployeeCard extends React.Component {
@@ -52,15 +55,15 @@ class EmployeeCard extends React.Component {
           }
           title="Cooling/Heating Supply"
         />
-        <Menu
+        <Menu className={classes.dropdown}
           id="simple-menu"
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
           onClose={this.handleClose}
         >
-          <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-          <MenuItem onClick={this.handleClose}>My account</MenuItem>
-          <MenuItem onClick={this.handleClose}>Logout</MenuItem>
+          <MenuItem className={classes.menuItem} onClick={this.handleClose}><small>Add New</small></MenuItem>
+          <MenuItem className={classes.menuItem} onClick={this.handleClose}><small>Edit</small></MenuItem>
+          <MenuItem className={classes.menuItem} onClick={this.handleClose}><small>Delete</small></MenuItem>
         </Menu>
         <CardContent>
           <Typography component="p" variant='caption'>
