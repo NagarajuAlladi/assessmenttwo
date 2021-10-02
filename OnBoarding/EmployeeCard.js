@@ -34,26 +34,37 @@ const styles = (theme) => ({
 class EmployeeCard extends React.Component {
   state = {
     anchorEl: null,
+    cardColor: false,
   };
 
   handleClick = (event) => {
-    this.setState({ anchorEl: event.currentTarget });
+    this.setState({ ...this.state, anchorEl: event.currentTarget });
   };
 
   handleClose = () => {
-    this.setState({ anchorEl: null });
+    this.setState({ ...this.state, anchorEl: null });
+  };
+  handleCardColor = () => {
+    this.setState({
+      cardColor: !this.state.cardColor,
+    });
   };
 
   render() {
+    console.log(this.props.id);
     const { classes } = this.props;
     const { anchorEl } = this.state;
-
-    const { title, content, images, cardColor, textColor } = this.props;
-    console.log(images);
+    const { title, content, images } = this.props;
     return (
       <Card
+        onClick={this.handleCardColor}
         className={classes.card}
-        style={{ backgroundColor: cardColor, color: textColor,boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px'}}
+        style={{
+          boxShadow:
+            "rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px",
+          backgroundColor: this.state.cardColor ? "blue" : "",
+          color: this.state.cardColor ? "white" : "",
+        }}
       >
         <CardHeader
           action={
@@ -104,10 +115,7 @@ class EmployeeCard extends React.Component {
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <AvatarGroup
-            max={3}
-            className={classes.expand}
-          >
+          <AvatarGroup max={3} className={classes.expand}>
             {images.map((image, i) => {
               return (
                 <Box>
