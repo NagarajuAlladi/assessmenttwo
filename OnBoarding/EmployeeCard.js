@@ -12,10 +12,12 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import AvatarGroup from "@material-ui/lab/AvatarGroup";
 import CardActions from "@material-ui/core/CardActions";
+import { Box } from "@material-ui/core";
 
 const styles = (theme) => ({
   card: {
     width: 250,
+    height: 250,
   },
   actions: {
     display: "flex",
@@ -23,9 +25,10 @@ const styles = (theme) => ({
   expand: {
     marginLeft: "auto",
   },
- menuItem:{
-  backgroundColor:'rgb(203,205,217)'
- },
+  menuItem: {
+    backgroundColor: "rgb(203,205,217)",
+    paddingRight: "40px",
+  },
 });
 
 class EmployeeCard extends React.Component {
@@ -45,54 +48,83 @@ class EmployeeCard extends React.Component {
     const { classes } = this.props;
     const { anchorEl } = this.state;
 
+    const { title, content, images, cardColor, textColor } = this.props;
+    console.log(images);
     return (
-      <Card className={classes.card}>
+      <Card
+        className={classes.card}
+        style={{ backgroundColor: cardColor, color: textColor,boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px'}}
+      >
         <CardHeader
           action={
-            <IconButton>
-              <MoreVertIcon onClick={this.handleClick} />
-            </IconButton>
+            <Box ml={2}>
+              <IconButton>
+                <MoreVertIcon onClick={this.handleClick} />
+              </IconButton>
+            </Box>
           }
-          title="Cooling/Heating Supply"
+          title={title}
         />
-        <Menu className={classes.dropdown}
+        <Menu
+          PaperProps={{
+            style: {
+              backgroundColor: "rgb(203,205,217)",
+              // width: "150px",
+              opacity: "1",
+              paddingTop: "0px",
+            },
+          }}
+          className={classes.dropdown}
           id="simple-menu"
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
           onClose={this.handleClose}
         >
-          <MenuItem className={classes.menuItem} onClick={this.handleClose}><small>Add New</small></MenuItem>
-          <MenuItem className={classes.menuItem} onClick={this.handleClose}><small>Edit</small></MenuItem>
-          <MenuItem className={classes.menuItem} onClick={this.handleClose}><small>Delete</small></MenuItem>
+          <MenuItem
+            className={classes.menuItem}
+            style={{ color: "white" }}
+            onClick={this.handleClose}
+          >
+            <small>Add New</small>
+          </MenuItem>
+          <MenuItem className={classes.menuItem} onClick={this.handleClose}>
+            <small>Edit</small>
+          </MenuItem>
+          <MenuItem className={classes.menuItem} onClick={this.handleClose}>
+            <small>Delete</small>
+          </MenuItem>
         </Menu>
         <CardContent>
-          <Typography component="p" variant='caption'>
-            <ul style={{paddingLeft:'10px'}}>
-            <li>OAHU Temperature Reset</li>
-            <li>Condenser Water Supply Temeperature Reset</li>
+          <Typography component="p" variant="caption">
+            <ul style={{ paddingLeft: "10px" }}>
+              {content.map((data, i) => {
+                return <li key={i}>{data}</li>;
+              })}
             </ul>
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <AvatarGroup max={3} className={classes.expand}>
-            <Avatar
-              variant="rounded"
-              style={{ borderBottomLeftRadius: "10px" }}
-              alt="Remy Sharp"
-              src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-            />
-            <Avatar
-              variant="rounded"
-              style={{ borderBottomLeftRadius: "10px" }}
-              alt="Remy Sharp"
-              src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-            />
-            <Avatar
-              variant="rounded"
-              style={{ borderBottomLeftRadius: "10px" }}
-              alt="Remy Sharp"
-              src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80"
-            />
+          <AvatarGroup
+            max={3}
+            className={classes.expand}
+          >
+            {images.map((image, i) => {
+              return (
+                <Box>
+                  <Avatar
+                    disableGutters={false}
+                    variant="rounded"
+                    style={{
+                      borderBottomLeftRadius: "10px",
+                      width: "1.87rem",
+                      height: "1.87rem",
+                    }}
+                    alt="Remy Sharp"
+                    src={image}
+                  />
+                </Box>
+              );
+            })}
           </AvatarGroup>
         </CardActions>
       </Card>

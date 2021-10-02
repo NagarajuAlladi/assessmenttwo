@@ -1,5 +1,6 @@
 import React from 'react'
-import EmployeeCard from '../OnBoarding/EmployeeCard'
+import Analytics from '../OnBoarding/Analytics'
+import MediaCard from '../OnBoarding/MediaCard'
 import NavBar from '../OnBoarding/NavBar'
 import Subnav from '../OnBoarding/Subnav'
 
@@ -8,7 +9,8 @@ function onboarding() {
         <div>
             <NavBar/>
             <Subnav/>
-            <EmployeeCard/>
+            <MediaCard/>
+            {/* <Analytics/> */}
         </div>
     )
 }
