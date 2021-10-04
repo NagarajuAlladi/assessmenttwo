@@ -115,7 +115,7 @@ function MediaCard() {
           })}
         </Grid>
       </Box>
-      <Box>
+      <Box  className={styles.analyticsBox}>
         <Grid>
           <Analytics/>
         </Grid>

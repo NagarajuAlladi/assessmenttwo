@@ -5,3 +5,13 @@
     /* padding-top:30px; */
     padding:50px 130px;
 }
+
+@media only screen and (max-width: 1050px) {
+    .container{
+        flex-direction: column;
+        padding: 40px ;
+    }
+    .analyticsBox{
+        padding-top: 40px;
+    }
+   }
