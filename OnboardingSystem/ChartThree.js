@@ -4,8 +4,7 @@ import Chart from "react-apexcharts";
 
 function ChartThree() {
   const options = {
-    series: [75],
-    labels: ["Applications"],
+    series: [50],
     colors: ["#333333"],
     plotOptions: {
       pie: {
@@ -14,28 +13,6 @@ function ChartThree() {
           size: "75%",
           labels: {
             show: true,
-            // name: {
-            //   show: true,
-            //   fontSize: "10px",
-            //   fontFamily: "Helvetica, Arial, sans-serif",
-            //   fontWeight: 100,
-            //   colors: ["#F44325", "#E91E25", "#9C77B0"],
-            //   offsetY: -10,
-            //   formatter: function (val) {
-            //     return val;
-            //   },
-            // },
-            // value: {
-            //   show: true,
-            //   fontSize: "22px",
-            //   fontFamily: "Helvetica, Arial, sans-serif",
-            //   fontWeight: 600,
-            //   color: undefined,
-            //   offsetY: 16,
-            //   formatter: function (val) {
-            //     return val;
-            //   },
-            // },
             total: {
               show: true,
               showAlways: false,
@@ -69,12 +46,14 @@ function ChartThree() {
         color: "#263238",
       },
     },
+    dataLabels: {
+      enabled: false,
+    },
   };
   const series = [50];
   return (
     <div>
       
-        <Grid>
         <Chart
           options={options}
           series={series}
@@ -82,8 +61,6 @@ function ChartThree() {
           width={350}
           height={250}
         />
-        </Grid>
-        
       
     </div>
   );

@@ -4,8 +4,8 @@ import Chart from "react-apexcharts";
 
 function ChartTwo() {
   const options = {
-    series: [75],
-    labels: ["Applications"],
+    series: [30],
+    // labels: ["Applications"],
     colors: ["#287452"],
     plotOptions: {
       pie: {
@@ -14,28 +14,6 @@ function ChartTwo() {
           size: "75%",
           labels: {
             show: true,
-            // name: {
-            //   show: true,
-            //   fontSize: "10px",
-            //   fontFamily: "Helvetica, Arial, sans-serif",
-            //   fontWeight: 100,
-            //   colors: ["#F44325", "#E91E25", "#9C77B0"],
-            //   offsetY: -10,
-            //   formatter: function (val) {
-            //     return val;
-            //   },
-            // },
-            // value: {
-            //   show: true,
-            //   fontSize: "22px",
-            //   fontFamily: "Helvetica, Arial, sans-serif",
-            //   fontWeight: 600,
-            //   color: undefined,
-            //   offsetY: 16,
-            //   formatter: function (val) {
-            //     return val;
-            //   },
-            // },
             total: {
               show: true,
               showAlways: false,
@@ -56,7 +34,7 @@ function ChartTwo() {
     },
 
     title: {
-      text: "Viewed more than 1 minute", 
+      text: "Viewed more than 1 minute",
       align: "center",
       margin: 10,
       offsetX: 0,
@@ -65,16 +43,17 @@ function ChartTwo() {
       style: {
         fontSize: "16px",
         fontWeight: "bold",
-        fontFamily: undefined,
         color: "#263238",
       },
+    },
+    dataLabels: {
+      enabled: false,
     },
   };
   const series = [30];
   return (
     <div>
-     
-        <Grid >
+      
         <Chart
           options={options}
           series={series}
@@ -82,9 +61,7 @@ function ChartTwo() {
           width={350}
           height={250}
         />
-        </Grid>
-        
-     
+      
     </div>
   );
 }

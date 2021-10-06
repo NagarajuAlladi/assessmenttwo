@@ -69,11 +69,14 @@ function ChartOne() {
         color: "#263238",
       },
     },
+    dataLabels: {
+      enabled: false,
+    }
   };
   const series = [75];
   return (
     <div>
-        <Grid>
+        
         <Chart
           options={options}
           series={series}
@@ -81,7 +84,7 @@ function ChartOne() {
           width={350}
           height={250}
         />
-        </Grid>
+        
      
     </div>
   );
