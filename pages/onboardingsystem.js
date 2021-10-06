@@ -2,6 +2,8 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 
 import dynamic from 'next/dynamic'
+import Card from '../OnboardingSystem/OnboardingCard'
+import OnboardingCard from '../OnboardingSystem/OnboardingCard'
 
 const DynamicComponentWithNoSSR = dynamic(
   () => import('../OnboardingSystem/ChartOne'),
@@ -31,6 +33,9 @@ function onboardingsystem() {
              <Grid item>
                <DynamicComponentWithNoSSRThree/>
              </Grid>
+           </Grid>
+           <Grid container>
+             <OnboardingCard/>
            </Grid>
         </div>
     )
