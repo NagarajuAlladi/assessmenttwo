@@ -9,8 +9,8 @@ import Subnav from '../OnBoarding/Subnav'
 function onboarding() {
     return (
         <div>
-            <NavBar/>
-            <Subnav/>
+            {/* <NavBar/> */}
+            {/* <Subnav/> */}
             <MediaCard/>
             <Footer/>
         </div>
