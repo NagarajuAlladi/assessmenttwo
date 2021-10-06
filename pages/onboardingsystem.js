@@ -24,8 +24,8 @@ const DynamicComponentWithNoSSRThree = dynamic(
 function onboardingsystem() {
     return (
         <div>
-           <Grid container xs={12} justifyContent='center' alignItems='center'>
-             <Grid item>
+           <Grid container xs={12} justifyContent='center' alignItems='center' spacing={5} style={{marginTop:'30px'}}>
+             <Grid item >
              <DynamicComponentWithNoSSR/>
              </Grid>
              <Grid item>
@@ -35,8 +35,8 @@ function onboardingsystem() {
                <DynamicComponentWithNoSSRThree/>
              </Grid>
            </Grid>
-           <Grid container>
-             <ParentCard/>
+           <Grid container xs={12} justifyContent='center' alignItems='center'>
+            <ParentCard/>
            </Grid>
         </div>
     )

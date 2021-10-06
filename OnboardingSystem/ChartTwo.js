@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Card, Grid } from "@material-ui/core";
 import Chart from "react-apexcharts";
 
 function ChartTwo() {
@@ -54,13 +54,15 @@ function ChartTwo() {
   return (
     <div>
       
-        <Chart
+       <Card>
+       <Chart
           options={options}
           series={series}
           type="donut"
           width={350}
           height={250}
         />
+       </Card>
       
     </div>
   );

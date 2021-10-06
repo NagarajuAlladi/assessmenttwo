@@ -1,12 +1,15 @@
+
+
+
 import React from "react";
-import { Grid } from "@material-ui/core";
+import { Card, Grid } from "@material-ui/core";
 import Chart from "react-apexcharts";
 
 function ChartOne() {
   const options = {
     series: [75],
-    labels: ["Applications"],
-    colors: ["#287872"],
+    // labels: ["Applications"],
+    colors: ["#123456"],
     plotOptions: {
       pie: {
         expandOnClick: false,
@@ -14,28 +17,6 @@ function ChartOne() {
           size: "75%",
           labels: {
             show: true,
-            // name: {
-            //   show: true,
-            //   fontSize: "10px",
-            //   fontFamily: "Helvetica, Arial, sans-serif",
-            //   fontWeight: 100,
-            //   colors: ["#F44325", "#E91E25", "#9C77B0"],
-            //   offsetY: -10,
-            //   formatter: function (val) {
-            //     return val;
-            //   },
-            // },
-            // value: {
-            //   show: true,
-            //   fontSize: "22px",
-            //   fontFamily: "Helvetica, Arial, sans-serif",
-            //   fontWeight: 600,
-            //   color: undefined,
-            //   offsetY: 16,
-            //   formatter: function (val) {
-            //     return val;
-            //   },
-            // },
             total: {
               show: true,
               showAlways: false,
@@ -65,27 +46,27 @@ function ChartOne() {
       style: {
         fontSize: "16px",
         fontWeight: "bold",
-        fontFamily: undefined,
         color: "#263238",
       },
     },
     dataLabels: {
       enabled: false,
-    }
+    },
   };
   const series = [75];
   return (
     <div>
-        
-        <Chart
+      
+       <Card>
+       <Chart
           options={options}
           series={series}
           type="donut"
           width={350}
           height={250}
         />
-        
-     
+       </Card>
+      
     </div>
   );
 }
