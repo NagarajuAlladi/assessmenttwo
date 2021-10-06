@@ -4,6 +4,7 @@ import { Grid } from '@material-ui/core'
 import dynamic from 'next/dynamic'
 import Card from '../OnboardingSystem/OnboardingCard'
 import OnboardingCard from '../OnboardingSystem/OnboardingCard'
+import ParentCard from '../OnboardingSystem/ParentCard'
 
 const DynamicComponentWithNoSSR = dynamic(
   () => import('../OnboardingSystem/ChartOne'),
@@ -35,7 +36,7 @@ function onboardingsystem() {
              </Grid>
            </Grid>
            <Grid container>
-             <OnboardingCard/>
+             <ParentCard/>
            </Grid>
         </div>
     )
