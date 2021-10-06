@@ -52,7 +52,7 @@ export default function SignUp() {
                 id="fullName"
                 size="small"
                 label="Full Name"
-                autoFocus
+                // autoFocus
               />
             </Grid>
             <Grid item xs={12}>
@@ -65,7 +65,7 @@ export default function SignUp() {
                 id="mobileNumber"
                 size="small"
                 label="Mobile Number"
-                autoFocus
+                // autoFocus
               />
             </Grid>
 
