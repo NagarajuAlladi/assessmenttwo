@@ -5,7 +5,7 @@ import Badge from "@material-ui/core/Badge";
 import Avatar from "@material-ui/core/Avatar";
 import { withStyles } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
-import styles from "../styles/onboarding/NavbarOnboard.module.css";
+import styles from "../../styles/onboarding/NavbarOnboard.module.css";
 
 const StyledBadge = withStyles((theme) => ({
   badge: {

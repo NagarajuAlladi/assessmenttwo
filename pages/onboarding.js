@@ -1,9 +1,9 @@
 import React from 'react'
-import Analytics from '../OnBoarding/Analytics'
-import Footer from '../OnBoarding/Footer'
-import MediaCard from '../OnBoarding/MediaCard'
-import NavBar from '../OnBoarding/NavBar'
-import Subnav from '../OnBoarding/Subnav'
+import Analytics from '../Components/OnBoarding/Analytics'
+import Footer from '../Components/OnBoarding/Footer'
+import MediaCard from '../Components/OnBoarding/MediaCard'
+import NavBar from '../Components/OnBoarding/NavBar'
+import Subnav from '../Components/OnBoarding/Subnav'
 
 
 function onboarding() {

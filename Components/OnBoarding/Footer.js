@@ -1,6 +1,6 @@
 import React from 'react'
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
-import styles from '../styles/onboarding/Footer.module.css'
+import styles from '../../styles/onboarding/Footer.module.css'
 function Footer() {
     return (
         <div className={styles.conatiner}>

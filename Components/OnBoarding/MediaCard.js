@@ -2,7 +2,7 @@ import React,{useState} from "react";
 import EmployeeCard from "./EmployeeCard";
 import { Grid, Paper } from "@material-ui/core";
 import { Box } from "@material-ui/core";
-import styles from "../styles/onboarding/MediaCard.module.css";
+import styles from "../../styles/onboarding/MediaCard.module.css";
 import Analytics from "./Analytics";
 
 const mediaCards = [

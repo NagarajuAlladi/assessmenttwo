@@ -2,7 +2,7 @@ import React from "react";
 import FolderOpenIcon from "@material-ui/icons/FolderOpen";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Grid, Typography } from "@material-ui/core";
-import styles from "../styles/onboarding/SubnavOnboard.module.css";
+import styles from "../../styles/onboarding/SubnavOnboard.module.css";
 
 function Subnav() {
   return (
