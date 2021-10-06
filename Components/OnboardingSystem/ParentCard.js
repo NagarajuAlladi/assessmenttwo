@@ -2,7 +2,7 @@
 
 import React from "react";
 import OnboardingCard from "./OnboardingCard";
-import styles from '../styles/OnboardingSystem/ParentCard.module.css'
+import styles from '../../styles/OnboardingSystem/ParentCard.module.css'
 import { Grid } from "@material-ui/core";
 
 const employeeCards = [
