@@ -98,7 +98,7 @@ function Design() {
 
   return (
     <div className={styles.container}>
-      <Accordion>
+      <Accordion  style={{ paddingRight: "0.93rem" }}>
         <AccordionSummary
           expandIcon={
             open ? (
