@@ -1,0 +1,18 @@
+.containerOne {
+  display: flex;
+  background-color: rgb(25, 33, 82);
+  justify-content: center;
+  align-items: center;
+}
+
+.containerTwo {
+  display: flex;
+  background-color: rgb(55, 76, 204);
+  align-items: center;
+  justify-content: space-between;
+}
+.containerThree {
+  display: flex;
+  align-items: center;
+  background-color: rgb(70, 92, 238);
+}
