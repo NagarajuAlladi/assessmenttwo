@@ -1,9 +1,12 @@
 import React from 'react'
+import DialogBox from '../Components/DialogBox'
+
 import Analytics from '../Components/OnBoarding/Analytics'
 import Footer from '../Components/OnBoarding/Footer'
 import MediaCard from '../Components/OnBoarding/MediaCard'
 import NavBar from '../Components/OnBoarding/NavBar'
 import Subnav from '../Components/OnBoarding/Subnav'
+import SignUp from '../Components/SignUp'
 
 
 function onboarding() {
@@ -11,8 +14,14 @@ function onboarding() {
         <div>
             {/* <NavBar/> */}
             {/* <Subnav/> */}
-            <MediaCard/>
-            <Footer/>
+            {/* <MediaCard/> */}
+            {/* <Footer/> */}
+           
+           <DialogBox title='Add New Employee'>
+           <SignUp/>
+           </DialogBox>
+           <MediaCard/>
+           <Footer/>
         </div>
     )
 }
